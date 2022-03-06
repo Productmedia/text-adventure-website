@@ -1,0 +1,116 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@keyframes option-panel-slide-in {
+  0%{
+    top: 150%;
+    opacity: 0;
+  }
+  
+  100%{
+    /* top: 55%; */
+  }
+}
+
+@keyframes card-slide-in {
+  0% {
+    transform: translateY(380px);
+    opacity: 0;
+  }
+
+  75% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+body {
+  /* background-color: rgb(114, 114, 114); */
+  /* background: radial-gradient(rgb(114, 114, 114), rgb(14, 14, 14)); */
+   background:radial-gradient(circle at center, rgb(114, 114, 114) 105%,  rgb(54, 54, 54) 100%);
+  /* width: 100vw; */
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* .slide {
+  transition: all 1.5s;
+  display: block;
+  top: 55%
+} */
+
+#option-panel {
+  border: 1px solid black;
+  position: absolute;
+  width: 70%;
+  height: 40%;
+  transition: 2s;
+  left: 15%;
+  top: 55%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  animation: option-panel-slide-in 1.2s ease-out;
+}
+
+.card {
+  color: black;
+  width: 20%;
+  height: 80%;
+  margin-top: 2rem;
+  margin-right: 3rem;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  /* content-visibility: hidden; */
+  transition: background-color 0.3s, box-shadow 0.2s;
+  display: none;
+}
+
+.intro {
+  animation: card-slide-in 1s;
+  /* animation-delay: 2s; */
+}
+
+.card:hover {
+  box-shadow:0 0 1rem 0.5rem rgba(0, 0, 0, .3);
+  background-color: rgba(255,255,255, 0.25);
+  animation: shake 1s infinite;
+  animation-delay: 0.4s;
+  /* content-visibility: block; */
+}
+.card:first-child {
+  margin-left: 8rem;
+}
