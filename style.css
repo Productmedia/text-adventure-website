@@ -4,14 +4,21 @@
   box-sizing: border-box;
 }
 
+/* Animations  */
+/* animation for the intro of option panel */
 @keyframes option-panel-slide-in {
   0%{
-    top: 150%;
+    bottom: -50%;
     opacity: 0;
   }
   
+  80% {
+    bottom: 5%;
+    opacity: 0.7;
+  }
   100%{
-    /* top: 55%; */
+    opacity: 1;
+    bottom: 2%;
   }
 }
 
@@ -33,22 +40,34 @@
 
 @keyframes shake {
   10%, 90% {
-    transform: translate3d(-1px, 0, 0);
+    transform: rotate(2deg);
+    /* transform: translate3d(0, -1px, 0); */
+    box-shadow:0 0 1rem 0.3rem rgba(0, 0, 0, .6);
+    /* background: linear-gradient(120deg, rgba(238, 228, 84, 0.5) 40%, rgba(76, 210, 228, 0.8) ) ; */
+    border: 1px solid black;
+    z-index: 1;
   }
   
   20%, 80% {
-    transform: translate3d(2px, 0, 0);
+    transform: rotate(-2deg);
+    /* transform: translate3d(0, 2px, 0); */
   }
-
+  
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
+    transform: rotate(2deg);
+    border: 1px solid white;
+    box-shadow:0 0 1rem 0.5rem rgba(0, 0, 0, .2);
+    /* transform: translate3d(0, -4px, 0); */
   }
-
+  
   40%, 60% {
-    transform: translate3d(4px, 0, 0);
+    transform: rotate(-2deg);
+    /* transform: translate3d(0, 4px, 0); */
+    /* background: linear-gradient(120deg, rgba(238, 228, 84, 0.6) 40%, rgba(65, 209, 228, 0.8) ) ; */
   }
 }
 
+/* website designs */
 
 body {
   /* background-color: rgb(114, 114, 114); */
@@ -68,12 +87,13 @@ body {
 #option-panel {
   border: 1px solid black;
   position: absolute;
-  width: 70%;
-  height: 40%;
+  width: 80%;
+  height: 35%;
   transition: 2s;
-  left: 15%;
-  top: 55%;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  left: 10%; /* centers the option panel in the center */
+  right: 10%; /* centers the option panel in the center */
+  bottom: 2%;
+  box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, .6); 
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
@@ -81,23 +101,42 @@ body {
   animation: option-panel-slide-in 1.2s ease-out;
 }
 
+#option-panel h2 {
+  margin: 10px 5px;
+}
+
+#option-panel .card-container {
+  border-top: 2px solid black;
+  display: grid;
+  grid-auto-flow: column; /* adujustable columns*/ 
+  height: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1fr;
+  column-gap: 20px;
+  /* place-items: end; */
+  /* align-items: start; */
+  justify-items: center;
+  padding-top: 3rem;
+}
+
 .card {
   color: black;
-  width: 20%;
-  height: 80%;
-  margin-top: 2rem;
-  margin-right: 3rem;
+  width: 75%;
+  height: 85%;
   padding: 10px;
-  font-size: 20px;
+  font-size: 17px;
   border: 1px solid black;
   border-radius: 10px;
   display: inline-block;
   text-align: center;
   cursor: pointer;
+  background: linear-gradient(120deg, rgba(238, 228, 84, 0.5) 40%, rgba(76, 210, 228, 0.8) ) ;
   /* content-visibility: hidden; */
   transition: background-color 0.3s, box-shadow 0.2s;
   display: none;
 }
+
 
 .intro {
   animation: card-slide-in 1s;
@@ -107,10 +146,30 @@ body {
 .card:hover {
   box-shadow:0 0 1rem 0.5rem rgba(0, 0, 0, .3);
   background-color: rgba(255,255,255, 0.25);
-  animation: shake 1s infinite;
-  animation-delay: 0.4s;
+  animation: shake 1.3s infinite;
+  animation-delay: 0.2s;
   /* content-visibility: block; */
 }
-.card:first-child {
-  margin-left: 8rem;
+
+.card h3 {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.card h3 .level {
+  color: rgb(11, 28, 100);
+  /* border: 1px solid black */
+  float: right;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.card p.value {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.card p.card-info {
+  margin-top: 30px;
+  color: white;
 }
