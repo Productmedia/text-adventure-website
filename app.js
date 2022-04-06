@@ -49,4 +49,37 @@ class box {
 
 story = [""]
 
+// in my room i can interact with:
+// weights, pc, clothes, phone, other objects 
+// on certain objects i can further fiddle with them, 
+// such as pc i can go online for research or play games or work on something
+
+// i can leave my home and go towards a location 
+// i can get details of what is happening on the way there.
+
+//an event can happen that can trigger the option panel to drop in and select what i do in that situation
+
+// a monster or a interactive moment can be adjustable by making it randomly between 2 sections that it can roam between 
+
+// on my way to the shop someone stopped me and said or done ...
+
+// on the story path we should be able to give options to the player and 
+// dive down that path some paths can rejoin back up to the main story so everybody arrives
+// the same way/ direction of what is going on in the story 
+
+// a great way of doing this is by incorprating of going to a casino and playing blackjack 
+
+// obliviously alot of people start of with small talk, so we should have a options for
+// us and the npc to choose from.
+
+// player has to go towards work at certain time 
+// go sleep other wise will pass out. (can effect or become the story)
+
+// a person has a story has well and can be connected and have same experience of 
+// other characters as long as same time and place.
+
+// can become a investigator and interview people about stuff 
+
+
+
 
