@@ -37,7 +37,7 @@ for(let i = 0; i < deckCards.length; i++) {
   card = deckCards[i];
   cards[i].innerHTML = 
   `<h3>${card.name} <span class="level">lvl:${card.level}</span></h3> 
-  <p>ICON</p>
+  <i class="fa-solid fa-sword"></i>
   <p class="value">${card.type}: ${card.typeValue}</p>
   
   <p class="card-info">${card.description}</p>`;
