@@ -1,5 +1,3 @@
-
-
 // rooms/story are are written and can then be placed in the story line 
 
 // when player is suppose to be met with a choice it then splits up and the player 
@@ -10,9 +8,12 @@
 // can also then have some paths requiring a key to unlock a door to that part 
 
 
+
+
 // 1) create a story of going towards the shop and buying some choices 
 // my bedroom that is connected to my house then walk down the road towards the shop
 // go into the co op and see what they are selling and buy something and then leave the shop to go back
+
 
 // 1.1 )
 // a place, a entered state to a place and then inner ones of those 
@@ -35,19 +36,26 @@
 // where it is located? location in the scenery/ how to get there?
 
 
+// ====================================================================
 // a location or property such has a home or business has a owner
 class box {
-  constructor(name) {
+
+  constructor(name, description) {
     this.name = name;
+    this.description;
   }
 }
+
+
+
+
 
 // story tell the user what is currently happen and what they want from the story ie choosing what happens
 // if there is nothing to choose from just allow the user to press enter to continue or space, 
 // this would happen when dailog has happen or knowing what has been said/done so probably will require 
 // a data that keeps track of what has happened and what is happening/ what is the goal
 
-story = [""]
+
 
 // in my room i can interact with:
 // weights, pc, clothes, phone, other objects 
@@ -81,5 +89,28 @@ story = [""]
 // can become a investigator and interview people about stuff 
 
 
+story = ["you wake up, feeling fresh and ready for the day.", "you went downstairs and checked out the kitchen for food"]
 
 
+
+
+room1 = {
+"name": "Joe's bedroom",
+"description": "It's very cluttered but yet very warm and welcoming.",
+"rooms": ["upstairs cooridoor"]
+}
+
+
+room2 = {
+  "name": "upstairs cooridoor",
+  "desription": "quite a small gap cooridoor with a window that has minimum sunlight",
+  "rooms": ["Joe's bedroom", "Jamie-lee bedroom", "Sam's bedroom", "downstairs cooridoor"]
+   
+}
+
+
+typeSentence(room1.description, text_space, 29)
+
+
+console.log(room1.rooms[0])
+drawCards(room1.rooms[0])

@@ -78,11 +78,19 @@ body {
   overflow: hidden;
 }
 
-/* .slide {
-  transition: all 1.5s;
-  display: block;
-  top: 55%
-} */
+#main-story {
+padding: 13px;
+}
+
+#main-story #location {
+  margin-bottom: 20px;
+  text-decoration: underline;
+  }
+  
+
+#main-story p {
+  font-size: 1.7rem;
+}
 
 #option-panel {
   border: 1px solid black;
@@ -97,8 +105,9 @@ body {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
-  overflow: hidden;
+  /* overflow: hidden; */
   animation: option-panel-slide-in 1.2s ease-out;
+  /* opacity: 0; */
 }
 
 #option-panel h2 {
@@ -118,6 +127,7 @@ body {
   /* align-items: start; */
   justify-items: center;
   padding-top: 1.5rem;
+  opacity: 1;
 }
 
 .card {
