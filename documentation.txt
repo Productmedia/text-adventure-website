@@ -1,3 +1,5 @@
+
+
 rooms/story are are written and can then be placed in the story line 
 
 when player is suppose to be met with a choice it then splits up and the player will choose what path to continue 

@@ -38,15 +38,44 @@
 
 // ====================================================================
 // a location or property such has a home or business has a owner
-class box {
-
+class room {
   constructor(name, description) {
     this.name = name;
-    this.description;
+    this.description = description;
+    this.options = []
   }
+
+  // setters
+
+  set_name(name){
+    this.name = name
+  }
+
+  set_description(description) {
+    this.description = description
+  }
+
+  get_name() {
+    return this.name
+  }
+
+  get_description(){
+    return this.description
+  }
+
+  add_options(option) {
+    this.options.push(option)
+  }
+  
 }
 
 
+joe_room = new room("Joe's bedroom", "A dark scary place")
+hall_way = new room("upstairs hallway", "a tight crowded hallway")
+sam_room = new room("Joe's bedroom", "A dark scary place")
+jamieLee_room = new room("jamie bedroom", "A dark scary place")
+
+joe_room.add_options([hall_way])
 
 
 
@@ -111,6 +140,7 @@ room2 = {
 
 typeSentence(room1.description, text_space, 29)
 
-
-console.log(room1.rooms[0])
-drawCards(room1.rooms[0])
+// joe_room.add_options(hall_way)
+console.log(joe_room)
+// console.log(room1.rooms[0])
+// drawCards(room1.rooms[0])

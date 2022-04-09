@@ -3,16 +3,16 @@ const option_panel = document.querySelector('#option-panel');
 let cards = document.getElementsByClassName("card")
 
 
-option_panel.onanimationend = () => {
-  console.log('Animation ended');
-  for(let i = 0; i < cards.length; i++) {
-    cards[i].classList.add("intro")
-    cards[i].style.display = "inline-block";
+// option_panel.onanimationend = () => {
+//   console.log('Animation ended');
+//   for(let i = 0; i < cards.length; i++) {
+//     cards[i].classList.add("intro")
+//     cards[i].style.display = "inline-block";
     
-  }
+//   }
   
   
-};
+// };
 
 
 for(let i = 0; i < cards.length; i++) {
@@ -34,19 +34,19 @@ cards[1]
 
 
 
-function drawCards(deckCards) {
-for(let i = 0; i < deckCards.length; i++) {
-  card = deckCards[i];
-  cards[i].innerHTML = 
-  `<h3>${card.name} <span class="level">lvl:${card.level}</span></h3> 
-  <i class="fa-solid fa-sword"></i>
-  <p class="value">${card.type}: ${card.typeValue}</p>
+// function drawCards(deckCards) {
+// for(let i = 0; i < deckCards.length; i++) {
+//   card = deckCards[i];
+//   cards[i].innerHTML = 
+//   `<h3>${card.name} <span class="level">lvl:${card.level}</span></h3> 
+//   <i class="fa-solid fa-sword"></i>
+//   <p class="value">${card.type}: ${card.typeValue}</p>
   
-  <p class="card-info">${card.description}</p>`;
+//   <p class="card-info">${card.description}</p>`;
 
   
-}
-}
+// }
+// }
 
 
 // drawCards(deck)
