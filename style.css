@@ -74,18 +74,40 @@ body {
   /* background: radial-gradient(rgb(114, 114, 114), rgb(14, 14, 14)); */
    background:radial-gradient(circle at center, rgb(114, 114, 114) 105%,  rgb(54, 54, 54) 100%);
   /* width: 100vw; */
+
+  display: grid;
+  grid-template-areas: 
+  "title title title title"
+  "description description description description"
+  "main main main aside"
+  "main main main aside"
+  "main main main aside"
+  "option option option option";
+  grid-template-rows: 4rem ;
   height: 100vh;
   overflow: hidden;
 }
 
-#main-story {
-padding: 13px;
-}
-
-#main-story #location {
-  margin-bottom: 20px;
+#location {
+  grid-area: title;
+  margin-left: 1rem;
+  margin-top: 0.7rem;
   text-decoration: underline;
   }
+
+#room-description {
+  grid-area: description;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+#main-story {
+  margin-left: 1rem;
+  grid-area: main;
+  font-size: 2rem;
+
+}
+
   
 
 #main-story p {
