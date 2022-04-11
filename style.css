@@ -67,12 +67,12 @@
   }
 }
 
-/* website designs */
+/* website design */
 
 body {
   /* background-color: rgb(114, 114, 114); */
   /* background: radial-gradient(rgb(114, 114, 114), rgb(14, 14, 14)); */
-   background:radial-gradient(circle at center, rgb(114, 114, 114) 105%,  rgb(54, 54, 54) 100%);
+   background:radial-gradient(circle at center, rgb(114, 114, 114) 100%,  rgba(54, 54, 54, 0.5) 100%);
   /* width: 100vw; */
 
   display: grid;
@@ -90,9 +90,10 @@ body {
 
 #location {
   grid-area: title;
-  margin-left: 1rem;
-  margin-top: 0.7rem;
+  padding-left: 1rem;
+  padding-top: 0.7rem;
   text-decoration: underline;
+  /* background-color: rgba(0, 0, 0, .2); */
   }
 
 #room-description {
